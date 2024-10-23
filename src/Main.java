@@ -24,7 +24,7 @@ public class Main {
 
             if (response == JOptionPane.YES_OPTION) {
                 //Exercise two - Увеличение значений переменных на 4
-                dog = dog + 4;
+                dog += 4;
                 cat = cat + 4;
                 paper = paper + 4;
 
@@ -93,11 +93,21 @@ public class Main {
                                     "Подтверждение",
                                     JOptionPane.YES_NO_OPTION);
                             if (response == JOptionPane.YES_OPTION) {
-                                var totalHours = 640;
+                                                                var totalHours = 640;
                                 var hoursPerEmployee = 8;
                                 var numberOfEmployees = totalHours / hoursPerEmployee;
                                 System.out.println("Всего работников в компании — " + numberOfEmployees + " человек.");
+                                JOptionPane.showMessageDialog(null, "Завершен переход - part one of exercise 8!", "", JOptionPane.INFORMATION_MESSAGE);
+                                var additionalEmployees = 94; // количество дополнительных сотрудников
 
+                                // Общее количество сотрудников в компании
+                                var currentEmployees = numberOfEmployees + additionalEmployees;
+
+                                // Общее количество часов работы, которое может быть поделено между сотрудниками
+                                var totalWorkHours = currentEmployees * hoursPerEmployee;
+
+                                System.out.println("Если в компании работает " + currentEmployees + " человек, то всего " + totalWorkHours + " часов работы может быть поделено между сотрудниками.");
+                                JOptionPane.showMessageDialog(null, "Завершен переход - part two of exercise 8!", "", JOptionPane.INFORMATION_MESSAGE);
                             }
                         }
                     }
